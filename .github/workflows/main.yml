@@ -26,7 +26,7 @@ jobs:
           python -m pip install -r docs/requirements.txt
       - name: Test 
         run: |
-          pytest test
+          pytest
 #      - name: Test Coverage
 #        run: |
 #          coverage report
