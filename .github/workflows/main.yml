@@ -26,7 +26,10 @@ jobs:
           python -m pip install -r docs/requirements.txt
       - name: Test 
         run: |
-          pytest -v
+          pwd
+          env
+          which pytest
+          pytest -vvv
 #      - name: Test Coverage
 #        run: |
 #          coverage report
