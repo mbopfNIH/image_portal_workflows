@@ -98,7 +98,7 @@ jobs:
           /usr/local/IMOD/bin/dm2mrc -h
           python -m pip install --upgrade pip
           pip install -e . -r requirements.txt 
-          pip install -e . git+https://github.com/niaid/tomojs-pytools/releases/tag/v1.3.6
+          pip install -e . git+https://github.com/niaid/tomojs-pytools@v1.3.6
           sudo apt -y update && sudo apt -y install libgl-dev graphicsmagick
           export HEDWIG_ENV=dev
           pytest test/test_dm.py
