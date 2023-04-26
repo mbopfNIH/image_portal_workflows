@@ -97,7 +97,8 @@ jobs:
           wget https://bio3d.colorado.edu/imod/AMD64-RHEL5/${IMOD} &&  sudo sh ${IMOD} -yes &&  rm -f ${IMOD}
           /usr/local/IMOD/bin/dm2mrc -h
           python -m pip install --upgrade pip
-          pip install -e . -r requirements.txt --find-links https://github.com/niaid/tomojs-pytools/releases/tag/v1.3.6
+          pip install -e . -r requirements.txt 
+          pip install -e . git+https://github.com/niaid/tomojs-pytools/releases/tag/v1.3.6
           sudo apt -y update && sudo apt -y install libgl-dev graphicsmagick
           export HEDWIG_ENV=dev
           pytest test/test_dm.py
