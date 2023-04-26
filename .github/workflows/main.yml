@@ -102,4 +102,5 @@ jobs:
           sudo apt -y update && sudo apt -y install libgl-dev graphicsmagick
           export HEDWIG_ENV=dev
           pytest test/test_dm.py
+          pytest test/test_utils.py
   
