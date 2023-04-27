@@ -106,6 +106,5 @@ jobs:
           pip install -e . git+https://github.com/niaid/tomojs-pytools@v1.3.6
           sudo apt -y update && sudo apt -y install libgl-dev graphicsmagick
           export HEDWIG_ENV=dev
-          pytest test/test_dm.py
-          pytest test/test_utils.py
+          pytest --cov-report term --cov=. test/test_dm.py test/test_utils.py
   
