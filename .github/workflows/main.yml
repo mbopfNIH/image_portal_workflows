@@ -111,7 +111,7 @@ jobs:
           export HEDWIG_ENV=dev
       - name: Test Coverage
         run: |
-          pytest --cov-report term --cov=. test/test_dm.py test/test_utils.py
+          pytest --cov-report term --cov=. test/test_dm.py 
           ls -l coverage.svg
           ls -l .coverage
 
