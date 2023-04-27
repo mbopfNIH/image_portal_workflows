@@ -54,6 +54,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
+        # Java needed for test_brt
+      - uses: actions/setup-java@v3
   #      - name: Create LFS file list
   #        run: |
   #          git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
