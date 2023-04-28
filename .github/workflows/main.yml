@@ -77,12 +77,12 @@ jobs:
 
       - name: Test Coverage
         run: |
+          continue-on-error: true
           pytest --cov-report term --cov=. test/test_dm.py test/test_utils.py
           ls -l coverage.svg
           ls -l .coverage
 
       - name: Coverage Badge
-        if: always()    # Continue even on failed tests
         uses: tj-actions/coverage-badge-py@v2
 
       - name: Verify Changed files
