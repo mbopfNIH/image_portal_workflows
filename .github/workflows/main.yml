@@ -74,6 +74,7 @@ jobs:
           pip install -e . git+https://github.com/niaid/tomojs-pytools@v1.3.6
           sudo apt -y update && sudo apt -y install libgl-dev graphicsmagick
           export HEDWIG_ENV=dev
+
       - name: Test Coverage
         run: |
           pytest --cov-report term --cov=. test/test_dm.py test/test_utils.py
@@ -81,6 +82,7 @@ jobs:
           ls -l .coverage
 
       - name: Coverage Badge
+        if: always()    # Continue even on failed tests
         uses: tj-actions/coverage-badge-py@v2
 
       - name: Verify Changed files
