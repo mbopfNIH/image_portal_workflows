@@ -13,5 +13,8 @@ Test Coverage:
 .. image:: ../../coverage.svg
 
 
+.. image:: https://github.com/mbopfNIH/image_portal_workflows/coverage.svg
+    :target: https://github.com/mbopfNIH/image_portal_workflows/coverage.svg
+
 
 
