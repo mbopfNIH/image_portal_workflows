@@ -114,7 +114,7 @@ jobs:
           ls -l /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/1-As-70-007.tif
           /usr/bin/which identify
           echo $PATH
-          /usr/bin/identify -v /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/1-As-70-007.tif
+          /usr/bin/identify -verbose /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/1-As-70-007.tif
           python -m pytest --cov-report term --cov=. test/test_dm.py test/test_utils.py
 
       - name: Coverage Badge
