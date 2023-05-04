@@ -111,12 +111,11 @@ jobs:
         run: |
           export IMOD_DIR=/usr/local/IMOD
           export PATH=$IMOD_DIR/bin:$PATH
-          /usr/bin/which header
-          header -h
           ls -l /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/
+          /usr/bin/file /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/*
           /usr/bin/which identify
           echo $PATH
-          /usr/bin/identify -verbose /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/1-As-70-007.tif
+          /usr/bin/identify -verbose /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/WT-2hr_008.tif
           python -m pytest --cov-report term --cov=. test/test_dm.py test/test_utils.py
 
       - name: Coverage Badge
