@@ -100,7 +100,6 @@ jobs:
           export IMOD_DIR=/usr/local/IMOD
           export PATH=$IMOD_DIR/bin:$PATH
           wget https://bio3d.colorado.edu/imod/AMD64-RHEL5/${IMOD} &&  sudo sh ${IMOD} -yes &&  rm -f ${IMOD}
-          /usr/local/IMOD/bin/dm2mrc -h
           python -m pip install --upgrade pip
           pip install -e . -r requirements.txt 
           sudo apt -y update && sudo apt -y install libgl-dev graphicsmagick
@@ -108,6 +107,11 @@ jobs:
       - name: Test Coverage
         continue-on-error: true
         run: |
+          export IMOD_DIR=/usr/local/IMOD
+          export PATH=$IMOD_DIR/bin:$PATH
+          /usr/bin/which header
+          header -h
+          ls -l /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI
           python -m pytest --cov-report term --cov=. test/test_dm.py test/test_utils.py
 
       - name: Coverage Badge
