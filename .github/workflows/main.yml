@@ -57,6 +57,8 @@ jobs:
         python-version: ["3.8"]
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v4
         
   #      - name: Create LFS file list
@@ -111,7 +113,7 @@ jobs:
           export PATH=$IMOD_DIR/bin:$PATH
           /usr/bin/which header
           header -h
-          ls -l /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/1-As-70-007.tif
+          ls -l /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/
           /usr/bin/which identify
           echo $PATH
           /usr/bin/identify -verbose /home/runner/work/image_portal_workflows/image_portal_workflows/test/input_files/dm_inputs/Projects/Lab/PI/1-As-70-007.tif
