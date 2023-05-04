@@ -28,7 +28,6 @@ def test_input_fname(mock_nfs_mount):
     assert state.is_successful()
 
 
-#@pytest.mark.skip(reason="Skipping: strange failure error")
 def test_single_file_no_ext_not_found_gens_exception(mock_nfs_mount):
     from em_workflows.dm_conversion.flow import flow
 
@@ -40,7 +39,6 @@ def test_single_file_no_ext_not_found_gens_exception(mock_nfs_mount):
     assert state.is_failed()
 
 
-@pytest.mark.skip(reason="Skipping: strange failure error")
 def test_single_file_not_found_gens_exception(mock_nfs_mount):
     from em_workflows.dm_conversion.flow import flow
 
